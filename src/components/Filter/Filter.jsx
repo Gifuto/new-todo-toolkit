@@ -25,11 +25,10 @@ export const Filter = () => {
     dispatch(filterTask(tasks));
   };
 
-  const handleSearchItem = (e, task) => {
-    if (e.code === "Enter" && value.trim()) {
-      dispatch(searchTask(value));
-      setValue("");
-    }
+  const handleSearchItem = (e) => {
+    setValue(e.target.value)
+    dispatch(searchTask(e.target.value));
+    
   };
 
   return (
@@ -47,9 +46,8 @@ export const Filter = () => {
       <StyledForm>
         <StyledSpan>Search:</StyledSpan>
         <SearchInput
-          onChange={(e) => setValue(e.target.value)}
+          onChange={handleSearchItem}
           value={value}
-          onKeyDown={handleSearchItem}
           type="text"
         />
       </StyledForm>

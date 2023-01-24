@@ -46,7 +46,7 @@ const todoSlice = createSlice({
 
       if (action.payload !== "") {
         state.filtered = state.filtered.filter(
-          (task) => task.text === action.payload
+          (task) => task.text.toLowerCase().includes(action.payload.toLowerCase())
         );
       }
     },
