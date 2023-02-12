@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 import { removeTask, toggleTask } from "../../store/todoSlice";
 
 export const List = () => {
-  const filteredTasks = useSelector((state) => state.toolkit.filtered);
+  const filteredTasks = useSelector((state) => state.toolkit.searched);
   const dispatch = useDispatch();
 
   const handleRemoveItem = (id) => {

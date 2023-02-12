@@ -18,7 +18,6 @@ export const Filter = () => {
     { value: "all", label: "all" },
     { value: "completed", label: "completed" },
     { value: "incompleted", label: "incompleted" },
-    { value: "text", input: "text" },
   ];
 
   const handleFilterItem = (tasks) => {
